@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/SolutionFiles/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+    <File Path="scripts/publish.ps1" />
+  </Folder>
+  <Project Path="src/AutoVpn/AutoVpn.csproj" />
+  <Project Path="tests/AutoVpn.Tests/AutoVpn.Tests.csproj" />
+</Solution>

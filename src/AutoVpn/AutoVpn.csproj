@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net10.0-windows;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>AutoVpn</RootNamespace>
+    <Product>autovpn</Product>
+    <Description>Secure Cisco AnyConnect CLI connector for Windows.</Description>
+    <AssemblyName>autovpn</AssemblyName>
+    <PackageId>autovpn</PackageId>
+    <Authors>Liesel Thuriot</Authors>
+    <Copyright>Copyright © 2026 Liesel Thuriot</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/LieselThuriot/autovpn</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/LieselThuriot/autovpn</PackageProjectUrl>
+    <PackageTags>vpn;cisco;anyconnect;totp;windows;cli</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>autovpn.png</PackageIcon>
+    <IsPackable>true</IsPackable>
+    <PackAsTool Condition="'$(TargetFramework)' == 'net10.0'">true</PackAsTool>
+    <ToolCommandName>autovpn</ToolCommandName>
+    <ApplicationIcon>..\..\autovpn.ico</ApplicationIcon>
+    <OptimizationPreference>Speed</OptimizationPreference>
+    <PublishTrimmed>true</PublishTrimmed>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="README.md" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="LICENSE" />
+    <None Include="..\..\autovpn.png" Pack="true" PackagePath="autovpn.png" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="10.0.11" />
+  </ItemGroup>
+</Project>
